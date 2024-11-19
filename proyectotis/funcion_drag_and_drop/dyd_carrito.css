@@ -1,0 +1,45 @@
+.producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    cursor: grab;
+    width: calc(33.333% - 20px); /* Tres productos por fila */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.producto:hover {
+    border-color: #007bff; /* Cambia el color del borde al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
+}
+
+.producto:active {
+    cursor: grabbing;
+}
+
+.carrito-area {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 100px;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s; /* Efecto suave al cambiar el fondo */
+}
+
+.carrito-area:hover {
+    background-color: #e9ecef; /* Cambia el color de fondo al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    .producto {
+        width: calc(50% - 20px); /* Dos productos por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .producto {
+        width: 100%; /* Un producto por fila */
+    }
+}
